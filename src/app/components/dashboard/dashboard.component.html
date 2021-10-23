@@ -1,1 +1,10 @@
-<p>dashboard works!</p>
+<!-- tailwind will not work for the color here, as it is generated dynamically according to the data from the microcontroller -->
+<div class="flex flex-col items-center">
+    <fa-icon [icon]="faLightbulb" style="color: {{ color.css }};" class="text-[25vh] left-[50%] hover:cursor-pointer">
+    </fa-icon>
+    <input [formControl]="addressFC" type="text" id="addressInput" class=" w-[20vw] rounded-md" />
+    <span *ngIf="formInvalid" class="text-error">Bitte eine IP-Adresse eingeben. z.B. 192.168.0.18</span>
+    <button (click)="onSubmit()"
+        class="dark:text-primary-dark-txt dark:bg-secondary-dark-btn py-2.5 px-24 mt-2.5 rounded-md ">Verbinden</button>
+    <p>{{ addressFC.value }}</p>
+</div>
