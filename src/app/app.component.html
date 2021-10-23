@@ -1,6 +1,7 @@
 <!-- This file just handles the routing and dark/light mode selection. The content of the page is in the individual component files. -->
 <div class="{{ darkMode ? 'dark' : '' }}">
   <div class="dark:bg-primary-dark-bg h-screen w-screen">
+    <app-menu></app-menu>
     <router-outlet></router-outlet>
   </div>
 </div>

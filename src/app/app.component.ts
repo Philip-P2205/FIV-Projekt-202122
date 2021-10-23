@@ -4,7 +4,7 @@ import { DarkModeService } from './services/dark-mode/dark-mode.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
   title = 'FIV-Project';
