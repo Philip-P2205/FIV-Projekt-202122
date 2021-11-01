@@ -1,0 +1,33 @@
+.page {
+  @apply absolute w-screen h-screen dark:bg-background-darker;
+}
+app-menu {
+  @apply absolute w-1/4 z-10 transition-all;
+}
+/* app-menu.menu-active {
+} */
+.main-content {
+  @apply absolute w-screen h-screen z-10 top-0 left-0 bg-background-darker text-text-default transition-all;
+}
+.menu-closer {
+  @apply absolute w-full h-full bg-transparent scale-0;
+}
+.menu-active .menu-closer {
+  @apply scale-100;
+}
+
+.main-content.menu-active {
+  @apply translate-x-1/4;
+}
+.main-content .menu-icon {
+  @apply text-3xl cursor-pointer;
+}
+.top-bar {
+  @apply w-full flex flex-row p-3 bg-background-default bg-opacity-60;
+}
+.page-header {
+  @apply w-full flex items-center justify-center text-2xl text-text-default;
+}
+.router {
+  @apply w-full h-full p-3 bg-background-default;
+}

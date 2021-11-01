@@ -1,62 +1,69 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-
+import { RouterModule, Route, Routes } from '@angular/router';
 import { IconDefinition } from '@fortawesome/fontawesome-common-types';
 import {
-  faTachometerAlt,
+  faChartBar,
+  faCog,
+  faEdit,
+  faInfoCircle,
   faSlidersH,
   faStopwatch,
-  faChartBar,
-  faEdit,
-  faCog,
-  faInfoCircle,
+  faTachometerAlt,
 } from '@fortawesome/free-solid-svg-icons';
+import { AboutComponent } from './components/about/about.component';
+import { ColorSelectorComponent } from './components/color-selector/color-selector.component';
+import { CustomEffectsComponent } from './components/custom-effects/custom-effects.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { EffectsComponent } from './components/effects/effects.component';
+import { SettingsComponent } from './components/settings/settings.component';
+import { TimerComponent } from './components/timer/timer.component';
 
-export const routes: Routes &
-  {
-    name: string;
-    icon: IconDefinition;
-  }[] = [
+export declare type MenuItem = Route & {
+  name: string;
+  icon: IconDefinition;
+};
+
+export const routes: MenuItem[] = [
   {
     name: 'Dashboard',
     path: 'dashboard',
-    // component: DashboardComponent,
+    component: DashboardComponent,
     icon: faTachometerAlt,
   },
   {
     name: 'Color Selector',
     path: 'color-selector',
-    // component: ColorSelectorComponent,
+    component: ColorSelectorComponent,
     icon: faSlidersH,
   },
   {
     name: 'Timer',
     path: 'timer',
-    // component: TimerComponent,
+    component: TimerComponent,
     icon: faStopwatch,
   },
   {
     name: 'Effects',
     path: 'effects',
-    // component: EffectsComponent,
+    component: EffectsComponent,
     icon: faChartBar,
   },
   {
     name: 'Custom Effects',
     path: 'effects-custom',
-    // component: CustomEffectsComponent,
+    component: CustomEffectsComponent,
     icon: faEdit,
   },
   {
     name: 'Settings',
     path: 'settings',
-    // component: SettingsComponent,
+    component: SettingsComponent,
     icon: faCog,
   },
   {
     name: 'About',
     path: 'about',
-    // component: AboutComponent,
+    component: AboutComponent,
     icon: faInfoCircle,
   },
 ];

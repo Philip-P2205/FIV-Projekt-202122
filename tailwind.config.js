@@ -10,17 +10,21 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                gray: {
-                    darker: '#1e272e',
-                    dark: '#2f3542',
-                    default: '#353b48',
-                    light: '#535c68'
-                },
                 text: {
-                    default: '#f5f6fa'
+                    darker: '#d1d5db',
+                    default: '#f3f4f6'
+                },
+                background: {
+                    darker: '#1f2937',
+                    default: '#374151'
                 }
+            },
+            zIndex: {
+                '-10': '-10',
+                '100': '100',
             }
         },
+
     },
     variants: {
         extend: {

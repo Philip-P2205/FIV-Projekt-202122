@@ -1,1 +1,24 @@
 <!-- This file just handles the routing and dark/light mode selection. The content of the page is in the individual component files. -->
+<div class="absolute w-screen h-screen overflow-hidden {{ darkMode ? 'dark': '' }}">
+  <div class="page">
+    <app-menu [active]="menuActive" (activeChange)="toggleMenu()" class="{{ menuActive ? 'menu-active' : '' }}">
+    </app-menu>
+    <div class="main-content {{ menuActive ? 'menu-active' : '' }}">
+
+      <div (click)="toggleMenu()" class="menu-closer"></div>
+
+
+      <header class="top-bar">
+        <fa-icon [icon]="faBars" (click)="toggleMenu()" class="menu-icon"></fa-icon>
+        <div class="page-header">
+          <h1>{{ pageTitle }}</h1>
+        </div>
+      </header>
+
+      <div class="router">
+        <router-outlet></router-outlet>
+      </div>
+
+    </div>
+  </div>
+</div>
