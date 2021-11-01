@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { Color } from 'src/app/models/color.model';
@@ -15,7 +16,10 @@ export class MicrocontrollerService {
   private connected: boolean;
   private colorSubject: BehaviorSubject<Color>;
 
-  constructor(private localStorage: LocalStorageService) {
+  constructor(
+    private localStorage: LocalStorageService,
+    private httpClient: HttpClient
+  ) {
     this.connected = this.checkConnection();
     this.localStorage.setItem('color', JSON.stringify(new Color(0, 200, 255)));
     this.colorSubject = new BehaviorSubject<Color>(
@@ -27,7 +31,15 @@ export class MicrocontrollerService {
    * Checks if the microcontroller is reachable under the specified ip-address.
    */
   checkConnection(): boolean {
-    this.localStorage.getItem('address');
+    const address = `http://${this.localStorage.getItem('address')}`;
+    this.httpClient
+      .get(address, {
+        observe: 'response',
+      })
+      .subscribe((res) => {
+        this.connected = res.status == 200;
+        console.log(res.statusText);
+      });
     return (this.connected = true);
   }
 

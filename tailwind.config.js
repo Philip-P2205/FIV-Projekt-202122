@@ -10,32 +10,21 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                primary: {
-                    dark: {
-                        bg: '#282C34',
-                        txt: '#F5F6Fa'
-                    }
+                gray: {
+                    darker: '#1e272e',
+                    dark: '#2f3542',
+                    default: '#353b48',
+                    light: '#535c68'
                 },
-                secondary: {
-                    dark: {
-                        bg: '#21252B',
-                        btn: '#404754',
-                        hover: '#4D5565',
-                        txt: '#CCCCCC'
-                    }
-                },
-                tertiary: {
-                    dark: {
-                        bg: '#2C313B',
-                        txt: '#9A9B9E'
-                    }
-                },
-                error: '#EB2F06'
+                text: {
+                    default: '#f5f6fa'
+                }
             }
         },
     },
     variants: {
-        extend: {},
+        extend: {
+        },
     },
     plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
 };
