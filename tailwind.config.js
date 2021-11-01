@@ -12,11 +12,15 @@ module.exports = {
             colors: {
                 text: {
                     darker: '#d1d5db',
-                    default: '#f3f4f6'
+                    dark: '#f3f4f6',
+                    light: '',
+                    lighter: ''
                 },
                 background: {
                     darker: '#1f2937',
-                    default: '#374151'
+                    dark: '#374151',
+                    light: '',
+                    lighter: ''
                 }
             },
             zIndex: {

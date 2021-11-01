@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DarkModeService } from './services/dark-mode/dark-mode.service';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 
 import { MenuItem, routes } from 'src/app/app-routing.module';
@@ -27,6 +27,14 @@ export class AppComponent implements OnInit {
 
   toggleMenu() {
     this.menuActive = !this.menuActive;
+  }
+  toggleDarkMode() {
+    if (this.darkModeService.isDarkModeEnabled())
+      this.darkModeService.disbaleDarkMode();
+    else this.darkModeService.enableDarkMode();
+  }
+  getDarkModeIndicator() {
+    return this.darkMode ? faMoon : faSun;
   }
   get darkMode(): boolean {
     return this.darkModeService.isDarkModeEnabled();

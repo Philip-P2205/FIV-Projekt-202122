@@ -1,5 +1,5 @@
 .menu {
-  @apply w-full h-screen flex flex-row items-center justify-center bg-background-darker text-text-darker transition-all;
+  @apply w-full h-screen flex flex-row items-center justify-center dark:bg-background-darker text-text-darker transition-all;
 }
 .menu-container {
   @apply w-full flex flex-col items-center;
@@ -9,12 +9,12 @@
 }
 
 .menu-icon {
-  @apply w-12 h-12 flex items-center justify-center bg-background-default bg-opacity-40 hover:bg-opacity-70 text-2xl  transition-all duration-200 rounded-lg;
+  @apply w-12 h-12 flex items-center justify-center dark:bg-background-dark dark:bg-opacity-40 dark:hover:bg-opacity-70 text-2xl  transition-all duration-200 rounded-lg;
 }
 .item-active .menu-icon {
-  @apply bg-text-default text-background-darker;
+  @apply dark:bg-text-dark dark:text-background-darker;
 }
 
 .item-active .menu-title {
-  @apply text-text-default;
+  @apply dark:text-text-dark;
 }

@@ -9,6 +9,7 @@ import { MenuItem, routes } from 'src/app/app-routing.module';
   styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent implements OnInit {
+  @Input() darkMode: string = '';
   @Input() active: boolean = false;
   @Output() activeChange = new EventEmitter<void>();
 

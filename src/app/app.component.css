@@ -7,10 +7,10 @@ app-menu {
 /* app-menu.menu-active {
 } */
 .main-content {
-  @apply absolute w-screen h-screen z-10 top-0 left-0 bg-background-darker text-text-default transition-all;
+  @apply absolute w-screen h-screen z-10 top-0 left-0 dark:bg-background-darker dark:text-text-dark transition-all;
 }
 .menu-closer {
-  @apply absolute w-full h-full bg-transparent scale-0;
+  @apply absolute w-full h-full dark:bg-transparent scale-0;
 }
 .menu-active .menu-closer {
   @apply scale-100;
@@ -23,11 +23,14 @@ app-menu {
   @apply text-3xl cursor-pointer;
 }
 .top-bar {
-  @apply w-full flex flex-row p-3 bg-background-default bg-opacity-60;
+  @apply w-full flex flex-row p-3 dark:bg-background-dark dark:bg-opacity-60;
 }
 .page-header {
-  @apply w-full flex items-center justify-center text-2xl text-text-default;
+  @apply w-full flex items-center justify-center text-2xl dark:text-text-dark;
+}
+.dark-mode-indicator {
+  @apply text-2xl cursor-pointer;
 }
 .router {
-  @apply w-full h-full p-3 bg-background-default;
+  @apply w-full h-full p-3 dark:bg-background-dark;
 }
