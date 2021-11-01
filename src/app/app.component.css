@@ -32,5 +32,6 @@ app-menu {
   @apply text-2xl cursor-pointer;
 }
 .router {
-  @apply w-full h-full p-3 dark:bg-background-dark;
+  /* Padding bottom to ensure all content is on screen */
+  @apply w-full h-full p-3 pb-[4.5rem] dark:bg-background-dark;
 }
