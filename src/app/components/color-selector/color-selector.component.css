@@ -1,0 +1,52 @@
+@import "@simonwep/pickr/dist/themes/nano.min.css";
+
+.color-selector {
+  @apply flex flex-col items-center justify-center;
+}
+
+.color-picker {
+  @apply flex flex-row items-center justify-center;
+}
+.color-picker fa-icon {
+  @apply text-[30vh] translate-x-1/2 leading-relaxed;
+}
+.color-picker .picker {
+  @apply w-[182px] h-[30vh] -translate-x-1/2 translate-y-[10px] opacity-0;
+}
+.color-text {
+  @apply text-3xl tracking-wider cursor-pointer;
+}
+.copy-indicator {
+  @apply absolute w-screen h-screen top-0 left-0 flex flex-col items-center justify-center scale-0;
+}
+.visible.copy-indicator {
+  @apply scale-100;
+  animation: copyFade 400ms ease;
+}
+.copy-indicator h1 {
+  @apply text-5xl leading-loose text-text-dark dark:text-text-lighter drop-shadow-lg;
+}
+.copy-indicator h2 {
+  @apply text-4xl leading-loose text-text-dark dark:text-text-lighter  drop-shadow-lg;
+}
+
+@keyframes copyFade {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.6;
+  }
+  40% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}

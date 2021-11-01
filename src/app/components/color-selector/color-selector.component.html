@@ -1,2 +1,13 @@
-<p>color-selector works!</p>
-<div class="{{ darkMode }}"></div>
+<div class="{{ darkMode }}">
+    <div class="color-selector">
+        <div class="color-picker">
+            <fa-icon [icon]="faLightbulb" style="color: {{ color }}"></fa-icon>
+            <input [formControl]="colorFC" type="color" class="picker">
+        </div>
+        <h1 (click)="copyColor()" class="color-text">{{ color }}</h1>
+    </div>
+    <div style="background: {{ color }}" class="copy-indicator {{ copyIndicatorVisible ? 'visible' : '' }}">
+        <h1>Copied!</h1>
+        <h2>{{ color }}</h2>
+    </div>
+</div>
