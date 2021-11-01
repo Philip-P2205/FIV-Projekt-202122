@@ -12,7 +12,9 @@
 .item-active .menu-icon {
   @apply bg-text-lighter dark:bg-text-dark text-background-light dark:text-background-darker;
 }
-
+.menu-title {
+  @apply text-center;
+}
 .item-active .menu-title {
   @apply text-text-lighter dark:text-text-dark;
 }
