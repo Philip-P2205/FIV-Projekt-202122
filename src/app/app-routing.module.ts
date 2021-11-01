@@ -68,7 +68,13 @@ export const routes: MenuItem[] = [
   },
 ];
 
-const _routes: Routes = routes;
+const _routes: Routes = [
+  ...routes,
+  {
+    path: '**',
+    redirectTo: '/dashboard',
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(_routes)],
