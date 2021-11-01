@@ -1,5 +1,5 @@
 .page {
-  @apply absolute w-screen h-screen dark:bg-background-darker;
+  @apply absolute w-screen h-screen bg-background-light dark:bg-background-darker;
 }
 app-menu {
   @apply absolute w-1/4 z-10 transition-all;
@@ -7,10 +7,10 @@ app-menu {
 /* app-menu.menu-active {
 } */
 .main-content {
-  @apply absolute w-screen h-screen z-10 top-0 left-0 dark:bg-background-darker dark:text-text-dark transition-all;
+  @apply absolute w-screen h-screen z-10 top-0 left-0 bg-background-light dark:bg-background-darker text-text-lighter dark:text-text-dark transition-all;
 }
 .menu-closer {
-  @apply absolute w-full h-full dark:bg-transparent scale-0;
+  @apply absolute w-full h-full bg-transparent scale-0;
 }
 .menu-active .menu-closer {
   @apply scale-100;
@@ -23,15 +23,15 @@ app-menu {
   @apply text-3xl cursor-pointer;
 }
 .top-bar {
-  @apply w-full flex flex-row p-3 dark:bg-background-dark dark:bg-opacity-60;
+  @apply w-full flex flex-row p-3 bg-background-lighter dark:bg-background-dark !bg-opacity-60;
 }
 .page-header {
-  @apply w-full flex items-center justify-center text-2xl dark:text-text-dark;
+  @apply w-full flex items-center justify-center text-2xl text-text-lighter dark:text-text-dark;
 }
 .dark-mode-indicator {
   @apply text-2xl cursor-pointer;
 }
 .router {
   /* Padding bottom to ensure all content is on screen */
-  @apply w-full h-full p-3 pb-[4.5rem] dark:bg-background-dark;
+  @apply w-full h-full p-3 pb-[4.5rem] bg-background-lighter dark:bg-background-dark;
 }

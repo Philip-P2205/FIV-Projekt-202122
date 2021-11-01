@@ -4,13 +4,14 @@ import { faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import { Router } from '@angular/router';
 
 import { MenuItem, routes } from 'src/app/app-routing.module';
+import { DarkModeComponent } from './services/dark-mode/dark-mode-component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent extends DarkModeComponent implements OnInit {
   readonly faBars = faBars;
 
   menuActive: boolean = false;
@@ -21,7 +22,9 @@ export class AppComponent implements OnInit {
   constructor(
     private darkModeService: DarkModeService,
     private router: Router
-  ) {}
+  ) {
+    super(darkModeService);
+  }
 
   ngOnInit(): void {}
 
@@ -35,9 +38,6 @@ export class AppComponent implements OnInit {
   }
   getDarkModeIndicator() {
     return this.darkMode ? faMoon : faSun;
-  }
-  get darkMode(): boolean {
-    return this.darkModeService.isDarkModeEnabled();
   }
 
   get pageTitle(): string {

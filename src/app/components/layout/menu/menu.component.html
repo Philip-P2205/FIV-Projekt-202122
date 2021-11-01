@@ -1,13 +1,15 @@
-<div class="menu {{ active ? '' : '-translate-x-full'}} {{ darkMode }}">
-    <div class="menu-container">
-        <div *ngFor="let menuItem of menuItems" (click)="navigateToMenuItem(menuItem)"
-            class="menu-item {{ isActive(menuItem) ? 'item-active' : '' }}">
+<div class="{{ darkMode }}">
+    <div class="menu {{ active ? '' : '-translate-x-full'}}">
+        <div class="menu-container">
+            <div *ngFor="let menuItem of menuItems" (click)="navigateToMenuItem(menuItem)"
+                class="menu-item {{ isActive(menuItem) ? 'item-active' : '' }}">
 
-            <div class="menu-icon">
-                <fa-icon [icon]="menuItem.icon"></fa-icon>
+                <div class="menu-icon">
+                    <fa-icon [icon]="menuItem.icon"></fa-icon>
+                </div>
+                <h1 class="menu-title">{{ menuItem.name }}</h1>
+
             </div>
-            <h1 class="menu-title">{{ menuItem.name }}</h1>
-
         </div>
     </div>
 </div>

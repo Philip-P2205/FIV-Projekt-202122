@@ -1,5 +1,5 @@
 module.exports = {
-    important: true,
+    // important: true,
     mode: 'jit',
     purge: {
         content: [
@@ -13,14 +13,14 @@ module.exports = {
                 text: {
                     darker: '#d1d5db',
                     dark: '#f3f4f6',
-                    light: '',
-                    lighter: ''
+                    light: '#111827',
+                    lighter: '#1f2937',
                 },
                 background: {
                     darker: '#1f2937',
                     dark: '#374151',
-                    light: '',
-                    lighter: ''
+                    light: '#d1d5db',
+                    lighter: '#f3f4f6',
                 }
             },
             zIndex: {
@@ -34,5 +34,5 @@ module.exports = {
         extend: {
         },
     },
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography'),],
 };

@@ -24,4 +24,8 @@ export class DarkModeService {
   disbaleDarkMode(): void {
     this.localStorage.setItem(key, 'false');
   }
+
+  get darkModeText(): string {
+    return this.isDarkModeEnabled() ? 'dark' : '';
+  }
 }

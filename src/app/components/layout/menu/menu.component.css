@@ -1,20 +1,18 @@
 .menu {
-  @apply w-full h-screen flex flex-row items-center justify-center dark:bg-background-darker text-text-darker transition-all;
-}
-.menu-container {
-  @apply w-full flex flex-col items-center;
+  @apply w-full h-screen flex flex-row items-center justify-center bg-background-light  dark:bg-background-darker text-text-light dark:text-text-darker transition-all;
 }
 .menu-item {
   @apply h-20 flex flex-col items-center my-3  cursor-pointer;
 }
 
 .menu-icon {
-  @apply w-12 h-12 flex items-center justify-center dark:bg-background-dark dark:bg-opacity-40 dark:hover:bg-opacity-70 text-2xl  transition-all duration-200 rounded-lg;
+  /* TODO: Add lighter mode hover animation */
+  @apply w-12 h-12 flex items-center justify-center bg-background-lighter dark:bg-background-dark dark:bg-opacity-40 dark:hover:bg-opacity-70 text-2xl  transition-all duration-200 rounded-lg;
 }
 .item-active .menu-icon {
-  @apply dark:bg-text-dark dark:text-background-darker;
+  @apply bg-text-lighter dark:bg-text-dark text-background-light dark:text-background-darker;
 }
 
 .item-active .menu-title {
-  @apply dark:text-text-dark;
+  @apply text-text-lighter dark:text-text-dark;
 }
