@@ -57,13 +57,14 @@ export class MicrocontrollerService {
 
   /**
    * Sets the color of the light controlled by the microcontroller.
-   * @param color The color to set the light to.
+   * @param color The color to set the light to. as {@link Color} or hex-string
    * TODO: Set the color of the light to the specified color
    */
-  setColor(color: Color): void {
+  setColor(color: Color | String): void {
     // Before anything is done, the microcontroller needs to be connected.
     if (!this.connected) throw new Error('Microcontroller is not connected!');
     // TODO: Tell the microcontroller the new color.
+    if (color instanceof String) color = Color.fromHEX(color as string);
     this.colorSubject.next(color);
   }
 

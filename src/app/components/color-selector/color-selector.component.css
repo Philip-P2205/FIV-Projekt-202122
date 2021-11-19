@@ -21,7 +21,7 @@
 }
 .visible.copy-indicator {
   @apply scale-100;
-  animation: copyFade 400ms ease;
+  animation: copyFade 500ms ease;
 }
 .copy-indicator h1 {
   @apply text-5xl leading-loose text-text-dark dark:text-text-lighter drop-shadow-lg;

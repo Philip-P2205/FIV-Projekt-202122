@@ -41,6 +41,6 @@ export class ColorSelectorComponent
   copyColor() {
     this.clipboard.copy(this.color);
     this.copyIndicatorVisible = true;
-    setTimeout(() => (this.copyIndicatorVisible = false), 350);
+    setTimeout(() => (this.copyIndicatorVisible = false), 450);
   }
 }
